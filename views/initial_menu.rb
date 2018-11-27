@@ -1,0 +1,3 @@
+class InitialMenu
+
+end
