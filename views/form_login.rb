@@ -1,6 +1,13 @@
+
 class FormLogin
 
-    def initialice( formLogin)
-        @formLogin= formLogin
-        
+    def initialice()
+        @email
+        @password 
+    end 
+
+    def form (email, password)
+        puts "enter email"
+        puts "enter password "
+    end
 end

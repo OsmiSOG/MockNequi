@@ -1,3 +1,3 @@
 class AccountMenu
-
+    
 end
