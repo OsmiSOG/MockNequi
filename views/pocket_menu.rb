@@ -25,21 +25,21 @@ class PocketMenu
             option = get_option
                 case option
                 when 1
-                puts 'information about pockets.'
+                    puts 'information about pockets.'
                 when 2
-                puts 'create a new pocket.'
+                    puts 'create a new pocket.'
                 when 3
-                puts 'delete pocket.'
+                    puts 'delete pocket.'
                 when 4
-                puts 'add money to a pocket.'
+                    puts 'add money to a pocket.'
                 when 5
-                puts 'withdraw money from a pocket'
+                    puts 'withdraw money from a pocket'
                 when 6
-                puts 'send money from one pocket to another'
+                    puts 'send money from one pocket to another'
                 when 7
-                puts 'return'
+                    puts 'return'
                 else
-                puts 'Wrong option'
+                    puts 'Wrong option'
                 end
         end while option != 7
     end

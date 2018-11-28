@@ -23,17 +23,17 @@ class GoalMenu
             option = get_option
                 case option
                 when 1
-                puts 'information about goals.'
+                    puts 'information about goals.'
                 when 2
-                puts 'create a new goal.'
+                    puts 'create a new goal.'
                 when 3
-                puts 'close goal.'
+                    puts 'close goal.'
                 when 4
-                puts 'add money to a goal'
+                    puts 'add money to a goal'
                 when 5
-                puts 'return'
+                    puts 'return'
                 else
-                puts 'Wrong option'
+                    puts 'Wrong option'
                 end
         end while option != 5
     end

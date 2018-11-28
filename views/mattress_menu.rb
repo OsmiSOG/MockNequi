@@ -23,16 +23,16 @@ class MattressMenu
             option = get_option
             case option
             when 1
-            puts 'check'
-            puts 'money in the mattress'
+                puts 'check'
+                puts 'money in the mattress'
             when 2
-            puts 'add money mattress'
+                puts 'add money mattress'
             when 3
-            puts 'withdram money'
+                puts 'withdram money'
             when 4
-            puts 'return'
+                puts 'return'
             else
-            puts 'Wrong option'
+                puts 'Wrong option'
             end
         end while option != 4
     end

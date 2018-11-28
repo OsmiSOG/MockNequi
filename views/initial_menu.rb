@@ -22,19 +22,19 @@ class InitialMenu
 
     def select_option
         begin
-        show_menu
-        option = get_option
-        case option
-        when 1
-            puts 'login'
-        when 2
-            puts 'Check'
-        when 3
-            puts 'bye'
-        else
-            puts 'Wrong option'
-        end
-        end while option != 3
+            show_menu
+            option = get_option
+            case option
+            when 1
+                puts 'login'
+            when 2
+                puts 'Check'
+            when 3
+                puts 'bye'
+            else
+                puts 'Wrong option'
+            end
+            end while option != 3
     end
 
 end
