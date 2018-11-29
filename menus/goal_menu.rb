@@ -1,22 +1,26 @@
 class GoalMenu
+
     def start
-        select_option
-        end
-        private 
+      system 'cls'
+      select_option
+    end
+
+    private
     def show_menu
-        puts "1.information about goals."
-        puts "2.create a new goal."
-        puts "3.close goal."
-        puts "4.add money to a goal"
-        puts "5.return menu"
-        end 
-    
+      puts "-------------- Goal Menu --------------\n"
+        puts "1. Information about goals."
+        puts "2. Create a new goal."
+        puts "3. Close goal."
+        puts "4. Add money to a goal"
+        puts "5. Return menu"
+    end
+
     def get_option
         print 'Enter to option: '
         option = gets.chomp.to_i
     end
-    
-    
+
+
     def select_option
         begin
             show_menu
@@ -32,10 +36,11 @@ class GoalMenu
                     puts 'add money to a goal'
                 when 5
                     puts 'return'
+                    system 'cls'
                 else
                     puts 'Wrong option'
                 end
         end while option != 5
     end
-    
+
 end
