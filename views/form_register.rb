@@ -1,24 +1,29 @@
+require 'digest'
+
+
 class FormRegister
 
-def initialize ()
-    @name
-    @email
-    @password
-end 
-    def show_welcome_form
-        puts 'MOCK NEQUI'
-        puts 'welcome to mock nequi'
-        puts 'to register fill in the following fields'
-    end
+  def initialize
+      @name
+      @email
+      @password
+  end
 
-    def get_data
-        puts 'enter your name'
-        @name=gets.chomp
-        puts 'enter your email'
-        @email=gets.chomp
-        puts 'enter a password' 
-        @password=gets.chomp
-    end
+  def show_welcome_form
+      puts '-------------- Create an account --------------'
+      puts 'Welcome to user registration'
+      puts 'To register fill in the following fields'
+      request_data
+  end
 
-    def 
+  private
+  def request_data
+      print 'enter your name:'
+      @name=gets.chomp
+      print 'enter your email:'
+      @email=gets.chomp
+      print 'enter a password:'
+      @password=Digest::SHA2.hexdigest gets.chomp
+  end
+
 end
