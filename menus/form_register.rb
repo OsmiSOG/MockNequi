@@ -10,7 +10,8 @@ class FormRegister
   end
 
   def show_welcome_form
-      puts '-------------- Create an account --------------'
+    system 'cls'
+      puts "-------------- Create an account --------------\n"
       puts 'Welcome to user registration'
       puts 'To register fill in the following fields'
       request_data

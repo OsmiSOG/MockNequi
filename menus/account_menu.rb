@@ -11,23 +11,23 @@ class AccountMenu
   end
 
   def start
-      select_option
+    system 'cls'
+    select_option
   end
 
   private
   def show_menu
-      puts "MOCK NEQUI"
-      puts "Account "
-      puts "1.check available balance."
-      puts "2.check total balance available."
-      puts "3.enter money into the account."
-      puts "4.withdraw money from the account."
-      puts "5.send money."
-      puts "6.check transactions."
-      puts "7.mattress."
-      puts "8.pocket."
-      puts "9.goals."
-      puts "10.Sign off."
+    puts "-------------- Account Menu --------------\n"
+      puts "1. Check available balance."
+      puts "2. Check total balance available."
+      puts "3. Enter money into the account."
+      puts "4. Withdraw money from the account."
+      puts "5. Send money."
+      puts "6. Check transactions."
+      puts "7. Mattress."
+      puts "8. Pocket."
+      puts "9. Goals."
+      puts "10. Sign off."
     end
 
   def get_option
@@ -53,13 +53,14 @@ class AccountMenu
       when 6
           puts 'check transactions.'
       when 7
-          puts 'mattress.'
+        @mattress_menu.start
       when 8
-          puts 'pocket.'
+        @pocket_menu.start
       when 9
-          puts 'goals.'
+        @goal_menu.start
       when 10
-          puts 'Sign off.'
+          puts 'Sign off'
+          system 'cls'
       else
           puts 'Wrong option'
       end

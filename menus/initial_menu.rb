@@ -3,9 +3,7 @@ require_relative 'form_register'
 class InitialMenu
 
     def initialize
-        puts '************** MOCK NEQUI ******************'
-        puts ''
-        puts '-- Welcome to Mock Nequi --'
+        puts "************** MOCK NEQUI ******************\n"
         @login_form = FormLogin.new
         @registration_form = FormRegister.new
     end
@@ -16,6 +14,7 @@ class InitialMenu
 
     private
     def show_menu
+      puts "-- Welcome to Mock Nequi --\n"
         puts '1. Login account'
         puts '2. Create an account'
         puts '3. Close Mock Nequi'
@@ -32,7 +31,7 @@ class InitialMenu
             option = get_option
             case option
             when 1
-                @login_form.request_informationdc
+                @login_form.request_information
             when 2
                 @registration_form.show_welcome_form
             when 3

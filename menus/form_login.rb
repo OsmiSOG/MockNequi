@@ -8,7 +8,8 @@ class FormLogin
     end
 
     def request_information
-      puts '-------------- Log in --------------'
+      system 'cls'
+      puts "-------------- Log in --------------\n"
       print 'enter email: '
       @email = gets.chomp
       print 'enter password: '
