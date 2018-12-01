@@ -7,7 +7,6 @@ class DBConection
       password: 'ossaOTGUE',
       host: 'localhost',
       port: '3306',
-      s
       database: 'geek_ground'
     )
   end
