@@ -1,11 +1,10 @@
-require_relative 'form_login'
-require_relative 'form_register'
+require_relative 'options/form_controller'
+
 class InitialMenu
 
     def initialize
         puts "************** MOCK NEQUI ******************\n"
-        @login_form = FormLogin.new
-        @registration_form = FormRegister.new
+        @form_controller = FormController.new
     end
 
     def start
@@ -31,9 +30,9 @@ class InitialMenu
             option = get_option
             case option
             when 1
-                @login_form.request_information
+                @form_controller.start_login
             when 2
-                @registration_form.show_welcome_form
+                @form_controller.start_register
             when 3
                 puts 'bye'
             else
