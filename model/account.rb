@@ -11,10 +11,6 @@ class Account
     @available_balance
   end
 
-  def getData(email)
-
-  end
 
   
-
 end
