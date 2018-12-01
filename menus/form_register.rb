@@ -3,13 +3,15 @@ require_relative ''
 
 class FormRegister
 
+  attr_accesor
+
   def initialize
       @name
       @email
       @password
   end
 
-  def show_welcome_form
+  def request_information
     system 'cls'
       puts "-------------- Create an account --------------\n"
       puts 'Welcome to user registration'
@@ -25,7 +27,7 @@ class FormRegister
       @email=gets.chomp
       print 'enter a password:'
       @password=Digest::SHA2.hexdigest gets.chomp
-      
+
   end
 
   def dark_password
