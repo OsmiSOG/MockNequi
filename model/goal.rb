@@ -8,4 +8,8 @@ class Goal
     @finish_time
   end
 
+  def add_money
+  end
+
+  def close_
 end

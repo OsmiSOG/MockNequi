@@ -1,4 +1,4 @@
-class ValidateFormLogin
+class ValidateLogin
 
 
   def validate_email(email)
