@@ -7,15 +7,11 @@ class Goal
     @create_time
     @finish_time
   end
-
-
-  def remove_money
-  end
-
+  
   def deposit_money
   end
-
-  def delete
-  end
   
+  def close_goal
+
 end
+

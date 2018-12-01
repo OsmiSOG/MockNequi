@@ -1,5 +1,5 @@
 require 'digest'
-
+require_relative ''
 
 class FormRegister
 
@@ -25,6 +25,10 @@ class FormRegister
       @email=gets.chomp
       print 'enter a password:'
       @password=Digest::SHA2.hexdigest gets.chomp
+      
+  end
+
+  def dark_password
   end
 
 end
