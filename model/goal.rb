@@ -41,12 +41,15 @@ end
   def close_goal
   end
 
+  def list_goals
+  end
+
   def missing_money
     @goal_balance - @current_balance
   end
 
   
-
+end
 
 
 
