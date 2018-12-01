@@ -4,6 +4,7 @@ class AccountController
   end
 
   def initialize_account(user)
+    
   end
 
   
