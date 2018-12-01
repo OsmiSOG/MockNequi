@@ -4,16 +4,17 @@ class AccessAccount
 
   def initialize
     @user = User.new
-    @account_menu = AccountMenu.new
   end
 
   def open_by_login(email)
-    @user.getData(email)
-    @account_menu.start
+    @user.set_user(email)
+    @account_cotroller.initialize_account(@user)
   end
 
   def open_by_register(name, email, password)
-
+    create_user
+    @user.asign_account
+    @account_cotroller.initialize_account(@user)
   end
 
   private

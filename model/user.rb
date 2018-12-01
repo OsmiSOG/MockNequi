@@ -10,6 +10,5 @@ class User
   end
 
   def set_user(email)
-  end
-
+  end 
 end

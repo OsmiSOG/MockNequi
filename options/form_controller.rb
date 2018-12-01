@@ -22,6 +22,6 @@ class FormController
   def start_register
     @form_register.request_information
     @validate_register.validate_email(@form_register.email)
-    @acces_account.create_account(@form_register.user, @form_register.email, @form_register.password)
+    @acces_account.open_by_register(@form_register.user, @form_register.email, @form_register.password)
   end
 end
