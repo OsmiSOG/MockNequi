@@ -1,5 +1,4 @@
 require 'digest'
-require_relative 'options/controller_form'
 
 class FormLogin
   attr_accessor :email, :password

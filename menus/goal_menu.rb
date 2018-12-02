@@ -1,12 +1,11 @@
 class GoalMenu
 
-    attr_accesor :option
+    attr_accessor :option
 
     def start
       system 'cls'
     end
 
-    private
     def show_menu
       puts "-------------- Goal Menu --------------\n"
         puts "1. Information about goals."

@@ -1,12 +1,11 @@
 class PocketMenu
 
-  attr_accesor :option
+  attr_accessor :option
 
     def start
       system 'cls'
     end
 
-    private
     def show_menu
       puts "-------------- Pocket Menu --------------\n"
         puts "1. Information about pockets."

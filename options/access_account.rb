@@ -1,20 +1,22 @@
-require_relative 'model/account'
-require_relative 'menus/account_menu'
+require_relative '../model/account'
+require_relative '../options/account_controller'
 class AccessAccount
 
   def initialize
-    @user
+    @account_cotroller = AccountController.new
   end
 
   def open_by_login(email)
-    @user.User.new(email)
-    @account_cotroller.initialize_account(@user)
+    user=User.new(email)
+    @account_cotroller.initialize_account(user)
+    user = nil
   end
 
   def open_by_register(name, email, password)
     create_account(name, email, password)
-    @user.User.new(email)
-    @account_cotroller.initialize_account(@user)
+    user=User.new(email)
+    @account_cotroller.initialize_account(user)
+    user = nil
   end
 
   private

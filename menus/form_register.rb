@@ -1,9 +1,8 @@
 require 'digest'
-require_relative ''
 
 class FormRegister
 
-  attr_accesor
+    attr_accessor :name, :email, :password
 
   def initialize
       @name

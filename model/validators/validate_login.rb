@@ -1,6 +1,6 @@
 class ValidateLogin
 
-  attr_accesor :access
+  attr_accessor :access
 
   def initialize
     @correct_email = false

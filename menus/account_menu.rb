@@ -4,7 +4,7 @@ require_relative 'goal_menu'
 
 class AccountMenu
 
-  attr_accesor :option
+  attr_accessor :option
 
   def initialize
     @option
@@ -14,7 +14,6 @@ class AccountMenu
     system 'cls'
   end
 
-  private
   def show_menu
     puts "-------------- Account Menu --------------\n"
       puts "1. Check available balance."

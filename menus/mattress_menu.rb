@@ -1,12 +1,11 @@
 class MattressMenu
 
-  attr_accesor :option
+  attr_accessor :option
 
     def start
       system 'cls'
     end
 
-    private
     def show_menu
       puts "-------------- Mattress Menu --------------\n"
         puts "1. Check the money saved in the mattress."

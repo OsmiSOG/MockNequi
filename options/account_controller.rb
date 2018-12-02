@@ -1,3 +1,10 @@
+require_relative '../model/user'
+require_relative '../model/account'
+require_relative '../menus/account_menu'
+require_relative '../menus/mattress_menu'
+require_relative '../menus/pocket_menu'
+require_relative '../menus/goal_menu'
+
 class AccountController
 
   def initialize
@@ -10,13 +17,14 @@ class AccountController
   end
 
   def initialize_account(user)
+    puts 'initialize_account'
     @user = user
     @account = Account.new(@user.id)
     @account_menu.start
-    @select_option_accout
+    select_option_account
   end
 
-  def select_option_accout
+  def select_option_account
     begin
       @account_menu.show_menu
       @account_menu.get_option
@@ -43,12 +51,59 @@ class AccountController
         @goal_menu.start
         select_option_goal
       when 10
+          close_account
           puts 'Sign off'
           system 'cls'
       else
           puts 'Wrong option'
       end
-    end while option != 10
+    end while @account_menu.option != 10
+  end
+
+  def select_option_mattress
+    begin
+      @mattress_menu.show_menu
+      @mattress_menu.get_option
+      case @mattress_menu.option
+      when 1
+        @account.mattress.show_balance
+      when 2
+        @account.mattress.add_money
+      when 3
+        @account.mattress.remove_money
+      when 4
+        puts 'return'
+        system 'cls'
+      else
+        puts 'Wrong option'
+      end
+    end while @mattress_menu.option != 4
+  end
+
+  def select_option_pocket
+    begin
+      @pocket_menu.show_menu
+      @pocket_menu.get_option
+      case @pocket_menu.option
+      when 1
+        @account.pocket.show_pockets
+      when 2
+        @account.pocket.create_pocket
+      when 3
+        @account.pocket.eliminate_pocket
+      when 4
+        @account.pocket.add_money
+      when 5
+        @account.pocket.remove_money
+      when 6
+        @account.pocket.send_money
+      when 7
+        puts 'return'
+        system 'cls'
+      else
+        puts 'Wrong option'
+      end
+    end while @pocket_menu.option != 7
   end
 
   def select_option_goal
@@ -57,67 +112,26 @@ class AccountController
           @goal_menu.get_option
               case @goal_menu.option
               when 1
-                  puts 'information about goals.'
+                  @account.goal.show_goals
               when 2
-                  puts 'create a new goal.'
+                  @account.goal.create_goal
               when 3
-                  puts 'close goal.'
+                  @account.goal.add_money
               when 4
-                  puts 'add money to a goal'
+                  @account.goal.close_goal
               when 5
                   puts 'return'
                   system 'cls'
               else
                   puts 'Wrong option'
               end
-      end while option != 5
+      end while @goal_menu.option != 5
   end
 
-  def select_option_mattress
-      begin
-        @mattress_menu.show_menu
-        @mattress_menu.get_option
-        case @mattress_menu.option
-        when 1
-            puts 'check'
-            puts 'money in the mattress'
-        when 2
-            puts 'add money mattress'
-        when 3
-            puts 'withdram money'
-        when 4
-            puts 'return'
-            system 'cls'
-        else
-            puts 'Wrong option'
-        end
-      end while option != 4
-  end
-
-  def select_option_pocket
-      begin
-          @pocket_menu.show_menu
-          @pocket_menu.get_option
-          case @pocket_menu.option
-          when 1
-              puts 'information about pockets.'
-          when 2
-              puts 'create a new pocket.'
-          when 3
-              puts 'delete pocket.'
-          when 4
-              puts 'add money to a pocket.'
-          when 5
-              puts 'withdraw money from a pocket'
-          when 6
-              puts 'send money from one pocket to another'
-          when 7
-              puts 'return'
-              system 'cls'
-          else
-              puts 'Wrong option'
-          end
-      end while option != 7
+  private
+  def close_account
+    @user = nil
+    @account = nil
   end
 
 end

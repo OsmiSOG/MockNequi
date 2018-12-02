@@ -1,4 +1,4 @@
-require_relative 'options/form_controller'
+require_relative '../options/form_controller'
 
 class InitialMenu
 
