@@ -21,7 +21,11 @@ class ValidateLogin
 
   private
   def validate_email(email)
-
+    if validates_format_of :email, :with => /@/
+      return true
+    else 
+      puts 'you have not entered a valid email address'
+  
   end
 
   def validate_password(password)
