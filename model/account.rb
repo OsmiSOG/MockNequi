@@ -2,8 +2,9 @@ require_relative '../model/user'
 require_relative '../model/pocket'
 require_relative '../model/mattress'
 require_relative '../model/goal'
+require_relative '../model/transaction'
 require_relative '../model/validators/account_validations'
-#require_relative '../model/db_conection'
+require_relative '../model/db_conection'
 
 class Account
 
@@ -15,7 +16,7 @@ class Account
     @available_balance
     @user_id = user_id
     @account_validations = AccountValidations.new
-    #@db_conection = DBConection.new
+    @db_conection = DBConection.new
     acces_data_db
   end
 
@@ -57,6 +58,6 @@ class Account
     @mattress = Mattress.new(@id)
     @pocket = Pocket.new(@id)
     @goal = Goal.new(@id)
-    #@transaction = Transaction(@id)
+    @transaction = Transaction(@id)
   end
 end
