@@ -1,14 +1,16 @@
 class User
 
-  def initialize
+  attr_accessor :id, :name, :email
+
+  def initialize(email)
     @id
     @name
-    @email
+    @email = email
+    acces_user_db
   end
 
-  def asign_account
+  private
+  def acces_user_db
+    #query para conocer los datos del usuario
   end
-
-  def set_user(email)
-  end 
 end

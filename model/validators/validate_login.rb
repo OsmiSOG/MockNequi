@@ -1,8 +1,7 @@
 require 'db_conection'
 class ValidateLogin
 
-
-  attr_accesor :access
+  attr_accessor :access
 
   def initialize
     @correct_email = false
@@ -25,7 +24,7 @@ class ValidateLogin
       return true
     else 
       puts 'you have not entered a valid email address'
-  
+    end
   end
 
   def validate_exits_email(email)
@@ -34,6 +33,7 @@ class ValidateLogin
       return false
     else
       @existing_user= user.new(db_conection, id)
+    end
   end
 
   def validate_password(password)

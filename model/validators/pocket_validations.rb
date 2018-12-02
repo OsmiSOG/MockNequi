@@ -1,4 +1,5 @@
 class PocketValidations
+
     #cuenta del bolsillo 
     #validar
     #no se pueden eliminar bolsillos si no hay bolsillo existentes

@@ -1,4 +1,5 @@
-class MattressValildations
+class MattressValidations
+  
     #cuenta de colchon
     #validar opciones
     #hay que validar cosas como
