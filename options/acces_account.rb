@@ -19,7 +19,7 @@ class AccessAccount
 
   private
   def create_user
-
+    #Query para insertar el usuario
   end
 
 end

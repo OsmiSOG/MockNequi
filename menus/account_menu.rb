@@ -8,6 +8,7 @@ class AccountMenu
     @pocket_menu = PocketMenu.new
     @mattress_menu = MattressMenu.new
     @goal_menu = GoalMenu.new
+    @account = Account.new
   end
 
   def start
@@ -41,7 +42,7 @@ class AccountMenu
       option = get_option
       case option
       when 1
-          puts 'check available balance.'
+        @account.show_available_balance
       when 2
           puts 'check total balance available.'
       when 3

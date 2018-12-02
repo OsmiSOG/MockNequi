@@ -4,18 +4,12 @@ class DBConection
   def initialize
       @client = Mysql2::Client.new(
       username: 'root',
-      password: 'ossaOTGUE',
+      password: '',
       host: 'localhost',
       port: '3306',
-      s
-      database: 'geek_ground'
+      socket: 'C:/xampp/mysql/mysql.sock',
+      database: 'mock_nequi'
     )
   end
 
-end
-
-con = DBConection.new
-result = con.client.query('SELECT * FROM geek_ground.games;')
-result.each do |i|
-  puts i
 end

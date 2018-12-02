@@ -6,10 +6,13 @@ class Goal
     @current_balance
     @create_time
     @finish_time
+    @account_id
   end
 
   def add_money
   end
 
-  def close_
+  def close_goal
+  end
+
 end

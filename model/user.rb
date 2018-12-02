@@ -7,8 +7,10 @@ class User
   end
 
   def asign_account
+    #query para insertar la cuenta vinculada a este usuario
   end
 
   def set_user(email)
-  end 
+    #query para conocer los datos del usuario
+  end
 end
