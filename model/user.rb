@@ -1,13 +1,11 @@
 class User
 
+  attr_accesor :id, :name, :email
+
   def initialize
     @id
     @name
     @email
-  end
-
-  def asign_account
-    #query para insertar la cuenta vinculada a este usuario
   end
 
   def set_user(email)

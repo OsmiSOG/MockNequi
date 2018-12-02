@@ -1,8 +1,9 @@
 class MattressMenu
 
+  attr_accesor :option
+
     def start
       system 'cls'
-      select_option
     end
 
     private
@@ -16,29 +17,10 @@ class MattressMenu
 
     def get_option
         print 'Enter to option: '
-        option = gets.chomp.to_i
+        @option = gets.chomp.to_i
     end
 
 
-    def select_option
-        begin
-          show_menu
-          option = get_option
-          case option
-          when 1
-              puts 'check'
-              puts 'money in the mattress'
-          when 2
-              puts 'add money mattress'
-          when 3
-              puts 'withdram money'
-          when 4
-              puts 'return'
-              system 'cls'
-          else
-              puts 'Wrong option'
-          end
-        end while option != 4
-    end
+
 
 end
