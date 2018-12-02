@@ -1,0 +1,216 @@
+[33mcommit a9973e6cd11a3ef65d58fdce09015737985d13e0[m[33m ([m[1;36mHEAD -> [m[1;32mgoalsAdd[m[33m)[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 19:16:44 2018 -0500
+
+    agregando metodo para verificar si el email existe en la base de datos
+
+[33mcommit 8311559d97802f299dad4a3967b4a803ee600ddd[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 19:06:43 2018 -0500
+
+    agregando metodo para validar email
+
+[33mcommit 491530c1710352ff72e1f4c572dd602d591f4825[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 18:53:48 2018 -0500
+
+    agregando nombre a las clases, y agregando validacion en class validate login
+
+[33mcommit 234794a67c7400e5a7df1a42c39823e7cda31bab[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 18:36:49 2018 -0500
+
+    agregando cambios
+
+[33mcommit 18a83b9d8896c0f8cf7f0b227d885f994e08162b[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 18:06:58 2018 -0500
+
+    agregando querys
+
+[33mcommit 17b444f602c51b44f2e4207bf194a04eaaea14ac[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Sat Dec 1 17:41:15 2018 -0500
+
+    agregando metodos
+
+[33mcommit 02ba1d68f9f992c2df67cf052bab1d4d3b1f38dc[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: f96e1c1 f147515
+Author: Manuela García M <42476682+manuGarciaMons@users.noreply.github.com>
+Date:   Sat Dec 1 16:25:32 2018 -0500
+
+    Merge pull request #6 from OsmiSOG/Validaciones
+    
+    Validaciones
+
+[33mcommit f147515819d101b4c485531adec3a62f5000b55d[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Sat Dec 1 16:20:16 2018 -0500
+
+    cambio de nombres y inicio para entrar a la cuenta
+
+[33mcommit a9e58d8b95e065203726bf351b33e901e59dda14[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Sat Dec 1 15:39:46 2018 -0500
+
+    cambio de nombre y modificaciones en los formularios
+
+[33mcommit f683574fe30567abc565af2057a4d33edf775444[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Sat Dec 1 11:46:09 2018 -0500
+
+    startaccount
+
+[33mcommit f96e1c163219eef97e1040eebb55c3ff899f887f[m
+Merge: 6429fd7 3d9a445
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Sat Dec 1 11:43:22 2018 -0500
+
+    Merge pull request #5 from OsmiSOG/Validaciones
+    
+    Validaciones
+
+[33mcommit 3d9a4453eff23b15d585f90797d7d3b79eeefcd1[m
+Merge: 36af65d 6429fd7
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Sat Dec 1 11:43:08 2018 -0500
+
+    Merge branch 'develop' into Validaciones
+
+[33mcommit 6429fd79e4d19ba6088c1125e7fe4a882a956d7d[m
+Merge: da431eb e8445cb
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Sat Dec 1 11:37:26 2018 -0500
+
+    Merge pull request #4 from OsmiSOG/migrations
+    
+    Migrations
+
+[33mcommit 36af65daef28bbfc5ae64bca925e571dc476928c[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Sat Dec 1 11:32:51 2018 -0500
+
+    registro
+
+[33mcommit 045b1d6e5aa687ec86a1572d3be67d278048dbfe[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Sat Dec 1 10:45:01 2018 -0500
+
+    crear clases validaciones y conexiones
+
+[33mcommit e8445cb756d1aa9f9eb2aa968cee7d4fb568f653[m[33m ([m[1;31morigin/migrations[m[33m, [m[1;32mmigrations[m[33m)[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Fri Nov 30 15:30:13 2018 -0500
+
+    add DB migration laravel
+
+[33mcommit e015b6005a8d27bb23583ed6957150c86ba703ef[m[33m ([m[1;32mmodel[m[33m)[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Thu Nov 29 11:33:50 2018 -0500
+
+    agregando metodos
+
+[33mcommit da431eba25ecd22497eadc89a2904fcb10ea7c1b[m
+Merge: 1d548c7 24d87dc
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Thu Nov 29 08:05:02 2018 -0500
+
+    Merge pull request #3 from OsmiSOG/finish_menus
+    
+    Finish menus
+
+[33mcommit 24d87dc1b30f350d1ea6b693af7aac9e5cb870b3[m[33m ([m[1;31morigin/finish_menus[m[33m)[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Wed Nov 28 22:45:32 2018 -0500
+
+    Inisializar modelos
+
+[33mcommit 851678f481d123f9b2c6611d7cd5f73c0a16dfd9[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Wed Nov 28 22:20:23 2018 -0500
+
+    Mejoras en los nombres y organizacion
+
+[33mcommit 7abff2d30d097a73d1eb3627a6a320820075ebb0[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Wed Nov 28 21:26:55 2018 -0500
+
+    Terminando menus y requires
+
+[33mcommit 1d548c7a38515ce76f49b1fb5caa4f4bd8d4c53b[m
+Merge: bbf9d20 f1884da
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Wed Nov 28 18:07:30 2018 -0500
+
+    Merge pull request #2 from OsmiSOG/menus
+    
+    Menus
+
+[33mcommit f1884da4d95d6820f17a61e823865310862073e6[m[33m ([m[1;31morigin/menus[m[33m, [m[1;32mmenus[m[33m)[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Wed Nov 28 11:09:14 2018 -0500
+
+    agregando cambios al menú
+
+[33mcommit 6c34d1f288c7817e0a8f38f0f86e16e08827bc94[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Wed Nov 28 10:44:40 2018 -0500
+
+    formulario de registro
+
+[33mcommit 8435e27afa7c6b48ce88405b85ebb0c257528594[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Wed Nov 28 10:28:47 2018 -0500
+
+    terminando menus de metas y bolsillos
+
+[33mcommit aa91a4863c07808b47ac0e8a40458f435b1d67b2[m
+Author: Manuela García <dyg9812@gmail.com>
+Date:   Wed Nov 28 10:04:48 2018 -0500
+
+    menu de colchon
+
+[33mcommit e023797dc65c7e1aa0fb26907e98a584a0e72ecd[m[33m ([m[1;31morigin/createMenus[m[33m)[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Tue Nov 27 20:00:25 2018 -0500
+
+    Creacion de metodos del menu inicial
+
+[33mcommit bbf9d20f62ab1c1a87d9ec101bd982bfa2e105ed[m
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Mon Nov 26 20:59:59 2018 -0500
+
+    Delete issue_template.md
+
+[33mcommit 0e881c8cbf0a46b1bcc136edfd412133932e04e2[m
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Mon Nov 26 20:49:52 2018 -0500
+
+    Create issue_template.md
+
+[33mcommit 435b19d98f3e3119e6bd6be208e2301d370907b2[m
+Merge: d1c87bb 7aafff0
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Mon Nov 26 20:22:40 2018 -0500
+
+    Merge pull request #1 from OsmiSOG/initialize_files
+    
+    Initialize files
+
+[33mcommit 7aafff06ba279de3d355777c64c9dd5593e3a4c7[m[33m ([m[1;31morigin/initialize_files[m[33m)[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Mon Nov 26 20:15:53 2018 -0500
+
+    Clases de los archivos creados
+
+[33mcommit d9d8bab90d7543424b586c1b1601c0e564e5a548[m
+Author: Osmi Guerrero <santiago.ooo6@gmail.com>
+Date:   Mon Nov 26 19:09:53 2018 -0500
+
+    Crear los archivos necesarios
+
+[33mcommit d1c87bb0c97d13d6031e1140bad5331b348df716[m
+Author: Osmi Guerrero <32116112+OsmiSOG@users.noreply.github.com>
+Date:   Mon Nov 26 17:38:32 2018 -0500
+
+    Initial commit

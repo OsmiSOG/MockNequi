@@ -33,7 +33,7 @@ class Account
   def show_total_balance
     puts '2'
   end
-
+  
   def deposit_money
     puts '3'
   end
