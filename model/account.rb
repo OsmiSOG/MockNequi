@@ -88,22 +88,23 @@ class Account
     send_money = gets.chomp.to_i
     puts "which is mail from the other user's account"
     receiver_email = gets.chomp.to_i
-    if send_money <= @available_balance
+    if send_money <= @available_balance && @account_validations.email_correct?(receiver_email)
       info_transaction = {
         type: 2,
         origin_pocket: 'Available',
-        money: out_money,
-        receiver: @user.email,
+        money: send_money,
+        sender: @user.name,
+        receiver: receiver_email,
         account_id: @id,
-        description_movement_id: 2,
+        description_movement_id: 4,
         account_balance: @total_balance
       }
       @transaction.withdrawals(info_transaction)
-      @total_balance -= out_money
-      @available_balance -= out_money
-      puts "#{out_money} retired money"
+      @total_balance -= send_money
+      @available_balance -= send_money
+      puts "#{out_money} send money to #{receiver_email}\n"
     else
-      puts 'you do not have enough balance to withdraw'
+      puts "You do not have enough balance to send\n"
     end
   end
 
