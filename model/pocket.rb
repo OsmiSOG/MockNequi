@@ -1,9 +1,8 @@
 class Pocket
 
   def initialize(account_id)
-     @name
-     @balance
-     @account_id
+     @account_id = account_id
+     @total_balance = total_balance_db
   end
 
   def show_pockets
@@ -28,6 +27,11 @@ class Pocket
 
   def send_money
     puts '6'
+  end
+
+  private
+  def total_balance_db
+
   end
 
 end

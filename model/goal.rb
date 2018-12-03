@@ -26,7 +26,7 @@ class Goal
       @status= i['status'] #estado de la cuenta
       @active= i['active']
       @account_id = i['account_id']# id de la cuenta
-
+    end
   end
 
   def create_goal
@@ -34,13 +34,16 @@ class Goal
   end
 
   def add_money
-    account_id= return_information(db_conection.query("SELECT id FROM accounts WHERE user_id = '#{@user_id}'"), @name
+    account_id= return_information(db_conection.query("SELECT id FROM accounts WHERE user_id = '#{@user_id}'"), @name)
   end
 
   def close_goal
     puts '4'
   end
 
+  def current_balance_total
+
+  end
 
   private
   def return_information(information, name)
