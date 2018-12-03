@@ -1,10 +1,5 @@
-#require_relative 'menus/initial_menu'
-#require 'digest'
-#system 'cls'
-#mock_nequi = InitialMenu.new
-#mock_nequi.start
-#print 'enter password: '
-#@password = Digest::SHA2.hexdigest gets.chomp
-#puts @password
+require_relative 'menus/initial_menu'
 
-puts Time.now.strftime("%Y-%m-%d %H:%M:%S")
+system 'cls'
+mock_nequi = InitialMenu.new
+mock_nequi.start

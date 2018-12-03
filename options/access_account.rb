@@ -8,30 +8,38 @@ class AccessAccount
   end
 
   def open_by_login(email)
-    user=User.new(email)
-    @account_cotroller.initialize_account(user)
-    user = nil
+    @user=User.new(email)
+    @account_cotroller.initialize_account(@user)
+    close_access
   end
 
   def open_by_register(name, email, password)
     create_account(name, email, password)
-    user=User.new(email)
-    @account_cotroller.initialize_account(user)
-    user = nil
+    @account_cotroller.initialize_account(@user)
+    close_access
   end
 
   private
   def create_account(name, email, password)
-    t = Time.now
     db = DBConection.new
     db.client.query("INSERT INTO `mock_nequi`.`users` (`name`, `email`, `password`)
       VALUES ('#{name}', '#{email}', '#{password}')")
-    db
-    id=@db.client.query("select id from mock_nequi.users
-      where email = #{@email}")
-    #Query para insertar el usuario
-    #Query para insertar la cuenta
-    #Query para insertar el colchon
+
+    @user=User.new(email)
+
+    db.client.query("INSERT INTO `mock_nequi`.`accounts` (`total_balance`, `user_id`, `created_at`, `updated_at`)
+	   VALUES (0, #{@user.id}, '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}', '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')")
+
+    account_id = db.client.query("SELECT id FROM mock_nequi.accounts
+      WHERE accounts.user_id = #{@user.id}")
+
+    account_id.each do |id|
+      db.client.query("INSERT INTO `mock_nequi`.`mattresses` (`balance`, `account_id`)
+  	   VALUES (0, #{id['id']})")
+    end
   end
 
+  def close_access
+    @user = nil
+  end
 end

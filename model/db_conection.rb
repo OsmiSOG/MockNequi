@@ -16,6 +16,3 @@ class DBConection
 end
 
 @db = DBConection.new
-id=@db.client.query("select id from mock_nequi.users
-  where email = 'oscarito@gmail.com'")
-id.each { |e| puts e['id'] }
