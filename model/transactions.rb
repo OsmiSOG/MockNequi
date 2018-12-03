@@ -15,12 +15,18 @@ class Transaction
   end
 
   def withdrawals(params)
+    @transaction_date = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    @db.client.query("UPDATE `mock_nequi`.`accounts` SET `total_balance` = '#{params[:account_balance]-params[:money]}', `updated_at` = '#{transaction_date}' WHERE (`id` = '#{params[:account_id]}')")
+    @db.client.query("INSERT INTO `mock_nequi`.`transactions` (`type`, `origin_pocket`,`money`, `email_addressee`, `account_id`, `description_movement_id`, `created_at`)
+     VALUES (#{params[:type]}, '#{params[:origin_pocket]}', #{params[:money]}, '#{params[:receiver]}', #{params[:account_id]}, #{params[:description_movement_id]}, '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')")
   end
 
   def send_money(params)
+
   end
 
   def receive_money(params)
+
   end
 
   def show_transactions(account_id, n)

@@ -52,21 +52,59 @@ class Account
         description_movement_id: 1,
         account_balance: @total_balance
       }
-      @transaction.deposit_money
+      @transaction.deposit_money(info_transaction)
       @total_balance += new_money
       @available_balance += new_money
-      puts 'completed transaction'
+      puts "completed transaction\n"
     else
-      puts 'Enter values ​​greater than 0'
+      puts "Enter values ​​greater than 0\n"
     end
   end
 
   def withdraw_money
-    puts '4'
+    puts "\nhow much money will you withdraw: "
+    out_money = gets.chomp.to_i
+    if out_money <= @available_balance
+      info_transaction = {
+        type: 2,
+        origin_pocket: 'Available',
+        money: out_money,
+        receiver: @user.email,
+        account_id: @id,
+        description_movement_id: 2,
+        account_balance: @total_balance
+      }
+      @transaction.withdrawals(info_transaction)
+      @total_balance -= out_money
+      @available_balance -= out_money
+      puts "#{out_money} retired money"
+    else
+      puts 'you do not have enough balance to withdraw'
+    end
   end
 
   def send_money
-    puts '5'
+    puts "\nhow much money will you send "
+    send_money = gets.chomp.to_i
+    puts "which is mail from the other user's account"
+    receiver_email = gets.chomp.to_i
+    if send_money <= @available_balance
+      info_transaction = {
+        type: 2,
+        origin_pocket: 'Available',
+        money: out_money,
+        receiver: @user.email,
+        account_id: @id,
+        description_movement_id: 2,
+        account_balance: @total_balance
+      }
+      @transaction.withdrawals(info_transaction)
+      @total_balance -= out_money
+      @available_balance -= out_money
+      puts "#{out_money} retired money"
+    else
+      puts 'you do not have enough balance to withdraw'
+    end
   end
 
   def check_transactions
