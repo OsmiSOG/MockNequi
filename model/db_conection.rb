@@ -1,4 +1,5 @@
 require 'mysql2'
+require 'digest'
 class DBConection
   attr_accessor :client
   def initialize
@@ -13,3 +14,8 @@ class DBConection
   end
 
 end
+
+@db = DBConection.new
+id=@db.client.query("select id from mock_nequi.users
+  where email = 'oscarito@gmail.com'")
+id.each { |e| puts e['id'] }

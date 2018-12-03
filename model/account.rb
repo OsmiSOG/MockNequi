@@ -21,7 +21,7 @@ class Account
   end
 
   def acces_data_db
-    #query para traer los datos de la cuenta
+    @db_conection.client.query
     calculate_available_balance
     set_data_base
   end
@@ -33,7 +33,7 @@ class Account
   def show_total_balance
     puts '2'
   end
-  
+
   def deposit_money
     puts '3'
   end

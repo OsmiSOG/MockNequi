@@ -1,14 +1,15 @@
 
 require 'db_conection'
 class Goal
-  
+
   def initialize(account_id)
     @id
     @name
     @goal_balance
     @current_balance
-    @create_time
-    @finish_time
+    @create_at
+    @update_at
+    @finish_at
     @account_id = account_id
   end
 
@@ -22,10 +23,10 @@ class Goal
       @current_balance= i['current_balance'] #saldo actual
       @create_time = i['create_time'] #fecha de inicio
       @finish_time = i['finish_time']#fecha final
-      @status= i['status'] #estado de la cuenta 
+      @status= i['status'] #estado de la cuenta
       @active= i['active']
-      @account_id = i['account_id']# id de la cuenta 
-      
+      @account_id = i['account_id']# id de la cuenta
+
   end
 
   def create_goal
@@ -54,6 +55,3 @@ class Goal
 
 
 end
-
-
-
