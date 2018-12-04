@@ -109,7 +109,9 @@ class Account
   end
 
   def check_transactions
-    puts '6'
+    puts 'There has been a problem with the email entered'
+    n = gets.chomp.to_i
+    @transaction.show_transactions(@id, n)
   end
 
   private

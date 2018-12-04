@@ -30,6 +30,15 @@ class Transaction
   end
 
   def show_transactions(account_id, n)
+    transactions = @db.client.query("SELECT t.type, t.origin_pocket, t.money, t.sender, t.email_addressee, dm.name, t.created_at FROM mock_nequi.transactions AS t
+      JOIN mock_nequi.accounts AS a
+      ON t.account_id = a.id
+      JOIN mock_nequi.description_movements AS dm
+      ON t.description_movement_id = dm.id
+      WHERE t.account_id = #{account_id}
+      ORDER BY t.created_at DESC
+      LIMIT #{n}")
+      print_transactions(transactions)
   end
 
   private
@@ -49,4 +58,11 @@ class Transaction
     return id
   end
 
+  def print_transactions(transactions)
+    i = 0
+    transactions.each do |row|
+      i = i+1
+      puts "#{i}. #{row}"
+    end
+  end
 end
