@@ -116,9 +116,9 @@ class Account
 
   private
   def set_data_base
-    @mattress = Mattress.new(@id)
-    @pocket = Pocket.new(@id)
-    @goal = Goal.new(@id)
+    @mattress = Mattress.new(self)
+    @pocket = Pocket.new(self)
+    @goal = Goal.new(self)
     @transaction = Transaction.new
   end
 
