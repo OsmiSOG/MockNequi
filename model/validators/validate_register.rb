@@ -1,22 +1,23 @@
-require_relative 'menus/form_login'
 require_relative 'model/db_conection'
-require 'validate_register'
+
 class ValidateRegister
   attr_accessor :access
 
     def initialize
+      @db = DBConection.rb
       @access = false
     end
 
-def validate_email(email)
+    def validate_email(email)
       if validates_format_of :email, :with => /@/
-        return true
-      else 
+        if exist_account?
+          @access = true
+        end
+      else
         puts 'you have not entered a valid email address'
+      enfd
     end
-      exist_account?
-  end
-     
+
   private
     def exist_account?
     account_database= return_element(@db_conection.query("SELECT 'id' FROM 'accounts' WHERE 'id'= '#{id}'"), 'id')
@@ -24,6 +25,7 @@ def validate_email(email)
         puts ' this account already exists, try again'
       else
         puts 'valid account'
+        return true
       end
     end
 
@@ -33,7 +35,5 @@ def validate_email(email)
         return i[name]
       end
     end
-  
-  end
-end
 
+end

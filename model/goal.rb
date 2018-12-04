@@ -2,7 +2,17 @@
 require 'db_conection'
 class Goal
 
-  @id
+  def initialize(account_id)
+    @id
+    @name
+    @goal_balance
+    @current_balance
+    @create_at
+    @update_at
+    @finish_at
+    @account_id = account_id
+  end
+
 
 
   attr_accessor :name, :current_balance, :status, :active, :finish_time
@@ -12,6 +22,7 @@ class Goal
     @db_conection= db_conection
     data=@db_conection.query("SELECT* FROM 'goals' WHERE 'id' = #{@id}")
     data.each do |i|
+<<<<<<< HEAD
     @name
     @goal_balance= i['goal_balance']#saldo meta
     @current_balance= i['current_balance'] #saldo actual
@@ -20,6 +31,17 @@ class Goal
     @status= i['status'] #estado de la cuenta
     @active= i['active']
     @account_id = i['account_id']# id de la cuenta
+=======
+      @name
+      @goal_balance= i['goal_balance']#saldo meta
+      @current_balance= i['current_balance'] #saldo actual
+      @create_time = i['create_time'] #fecha de inicio
+      @finish_time = i['finish_time']#fecha final
+      @status= i['status'] #estado de la cuenta
+      @active= i['active']
+      @account_id = i['account_id']# id de la cuenta
+    end
+>>>>>>> functionalities
   end
 end
 
@@ -39,6 +61,10 @@ end
               end
     @db_conection.query("UPDATE 'goals' SET 'status' = '#{@status}'
                       WHERE 'goals'.'id' = '#{@id}'")
+  end
+  
+  def add_money
+    account_id= return_information(db_conection.query("SELECT id FROM accounts WHERE user_id = '#{@user_id}'"), @name)
   end
 
   def deposit_money()
@@ -64,6 +90,9 @@ end
   end
   end
 
+  def current_balance_total
+
+  end
 
 
   def return_information(information, name)
@@ -90,6 +119,7 @@ end
     puts "goal status: #{@status}"
     puts "final date: #{@finish_time}"
 
+<<<<<<< HEAD
   end
 
   def missing_money
@@ -97,4 +127,6 @@ end
   end
 
 
+=======
+>>>>>>> functionalities
 end

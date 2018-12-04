@@ -17,10 +17,11 @@ class AccountController
   end
 
   def initialize_account(user)
-    puts 'initialize_account'
+
     @user = user
-    @account = Account.new(@user.id)
+    @account = Account.new(@user)
     @account_menu.start
+    puts "Welcome #{@user.name} at your nequi account"
     select_option_account
   end
 

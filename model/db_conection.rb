@@ -1,4 +1,5 @@
 require 'mysql2'
+require 'digest'
 class DBConection
   attr_accessor :client
   def initialize
@@ -13,3 +14,5 @@ class DBConection
   end
 
 end
+
+@db = DBConection.new

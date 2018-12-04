@@ -1,9 +1,10 @@
 require 'db_conection'
 class Mattress
 
+  attr_accessor :balance
+
   def initialize(account_id)
     @balance
-    @account_id
     @account_id = account_id
     acces_data_db
     @db_conection
