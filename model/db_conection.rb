@@ -1,5 +1,5 @@
 require 'mysql2'
-require 'digest'
+
 class DBConection
   attr_accessor :client
   def initialize
