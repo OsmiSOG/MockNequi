@@ -2,20 +2,20 @@ require_relative '../model/user'
 require_relative '../model/pocket'
 require_relative '../model/mattress'
 require_relative '../model/goal'
-require_relative '../model/transaction'
+require_relative '../model/transactions'
 require_relative '../model/validators/account_validations'
 require_relative '../model/db_conection'
 
 class Account
 
-  attr_accessor :mattress, :pocket, :goal, :transaction
+  attr_accessor :mattress, :pocket, :goal, :transaction, :available_balance, :total_balance
 
   def initialize(user)
     @id
     @total_balance
     @available_balance
     @user = user
-    @transaction
+    @transaction = Transaction.new
     @account_validations = AccountValidations.new
     @db_conection = DBConection.new
     get_data_db
@@ -99,10 +99,10 @@ class Account
         description_movement_id: 4,
         account_balance: @total_balance
       }
-      @transaction.withdrawals(info_transaction)
+      @transaction.send_money(info_transaction)
       @total_balance -= send_money
       @available_balance -= send_money
-      puts "#{out_money} send money to #{receiver_email}\n"
+      puts "#{send_money} send money to #{receiver_email}\n"
     else
       puts "You do not have enough balance to send\n"
     end
@@ -116,9 +116,9 @@ class Account
 
   private
   def set_data_base
-    @mattress = Mattress.new(@id)
-    @pocket = Pocket.new(@id)
-    @goal = Goal.new(@id)
+    @mattress = Mattress.new(self)
+    @pocket = Pocket.new(self)
+    @goal = Goal.new(self)
     @transaction = Transaction.new
   end
 
